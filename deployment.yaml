@@ -1,9 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  name: web-stabel
   labels:
     app: web
-  name: web
 spec:
   replicas: 3
   selector:
