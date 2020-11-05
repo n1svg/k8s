@@ -34,7 +34,9 @@ kube-scheduler-minikube                     1/1     Running     7          7d17h
 storage-provisioner                         1/1     Running     12         7d17h
 
 
- $ kubectl describe pods kube-apiserver-minikube kube-controller-manager-minikube kube-scheduler-minikube -n kube-system | grep Controlled
+ $ kubectl describe pods kube-apiserver-minikube \
+ kube-controller-manager-minikube \
+ kube-scheduler-minikube -n kube-system | grep Controlled
 
 Controlled By:  Node/minikube
 Controlled By:  Node/minikube
