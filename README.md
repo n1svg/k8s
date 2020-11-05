@@ -4,17 +4,17 @@ We need to apply ConfigMap from cm.yaml to get a difference in answers.
 We need to change /etc/hosts and add name "test.lab" match to minikube ip
 
 in my case it seems like:
-
+```
  $ cat /etc/hosts
 
 127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
 ::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
 10.88.0.12  test.lab
-
+```
 Then we can test ingress behavior.
-
+```
 for i in {1..10}; do curl -H "canary:always" http://test.lab; echo ; done
-
+```
 
 ######################### Control Plane Minikube ###############################
  $ kubectl get pods -n kube-system 
