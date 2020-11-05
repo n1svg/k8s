@@ -17,6 +17,7 @@ for i in {1..10}; do curl -H "canary:always" http://test.lab; echo ; done
 ```
 
 ######################### Control Plane Minikube ###############################
+ ```
  $ kubectl get pods -n kube-system 
 
 NAME                                        READY   STATUS      RESTARTS   AGE
@@ -43,3 +44,4 @@ Controlled By:  Node/minikube
 NAME       STATUS   ROLES    AGE     VERSION
 minikube   Ready    master   7d18h   v1.19.2
 
+```
